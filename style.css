@@ -1,0 +1,18 @@
+.inputpanel{
+    background-color: lightblue;
+    position: absolute;
+    bottom: 10px;  
+}
+.inputgrid{
+    background: lightslategray;
+}
+.displayline{
+    background-color: antiquewhite;
+    position: absolute;
+    bottom: 10px;
+    left: 275px;
+}
+
+.plan{
+    background-color: burlywood;
+}
