@@ -1,15 +1,13 @@
 <html>
 <head>
-    <div>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> is licensed by CC BY 4.0</div>
-
     <link rel="stylesheet" href="style.css">
+    <script src="js/reservation.js"></script>
     <script src="js/addcustomer.js"></script>
     <script src="js/filltable.js"></script>
 </head>
 
 <body id="body">
 
-    
     <br>
 
     <div class="plan">
@@ -28,14 +26,15 @@
         <button onclick="kick([7])" id="table7" style="width:80px;height:50px;position:absolute;top:310px;left:240px"></button>
 
     </div>
-    
-
-    <br><br>
 
     <div class="inputpanel">
+
         <label for="addcustomer">Number of customer: </label>
         <input id="addcustomer" style="width:50px"></input>
         <button onclick="queue()">confirm</button>
+        <br>
+        <label for="reservation">Reserved</label>
+        <input type="checkbox" id="reservation" style="width:50px;" checked></input>
         <br><br>
         <center>
         <div class="inputgrid">
@@ -52,17 +51,25 @@
             <button onclick="numqueue([9])" id="nq9" style="width:40px;height:40px">9</button>
         </div>
         </center>
+
     </div>
 
     <div class = "displayline">
         <h id="queuing0">queuing: 0</h>
         <p id="queuing"> </p>
-        <p id="wait"> </p>      
+        <p id="wait"> </p>
+        
+        <div style="bottom: 0px; position: absolute">
         <button onclick="filltable()">Auto fill</button>
         <button>Click icon to remove party</button>
+        <div>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> is licensed by CC BY 4.0</div>
+        </div>
     </div>   
     
-    
+    <div class = "reserved">
+        <h><center>Reserved List</center></h>
+        <p id="waitR"></p>
+    </div>
 
 </body>
 </html>
