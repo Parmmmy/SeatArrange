@@ -4,8 +4,6 @@ var C
 window.myCustomer = new Array();
 var number
 
-//var tablename=[0,0,0,0,0,0,0,0]
-
 function readqueue(line){
     number = "&nbsp&nbsp&nbsp&nbsp&nbsp&thinsp;"
     for (let i=0;i<line.length;i++){
@@ -15,8 +13,8 @@ function readqueue(line){
 
 function setid(myCustomer){
     for (let i=0;i<myCustomer.length;i++){
-        myCustomer[i].id="customer"+i;
-        document.getElementById("customer"+i).onclick = function(){removecustomer(i);};
+        //myCustomer[i].id="myCustomer"+i;
+        myCustomer[i].onclick = function(){removecustomer(i);};
     }
 }
 
@@ -50,19 +48,12 @@ function queue(){
 }
 
 function numqueue(x){
-    line.push(x);
-    addcustomer();
-}
-
-/*
-function filltable(){
-    for (let i=0;i<tablename.length;i++){
-        if(tablename[i] == 0 && line.length!=0){
-            console.log(i+"it work!");
-            tablename[i] = line[0];
-            document.getElementById("table"+i).innerHTML=tablename[i];
-            removecustomer(0);
-        }
+    if(document.getElementById("reservation").checked){
+        addreservedcustomer();
     }
+    else{
+        line.push(x);
+        addcustomer();
+    }
+
 }
-*/

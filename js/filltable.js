@@ -1,6 +1,7 @@
 var tablename=[0,0,0,0,0,0,0,0]
 
 function filltable(){
+    //console.log(document.getElementById("reservation").checked)
     for (let i=0;i<tablename.length;i++){
         if(tablename[i] == 0 && line.length!=0){
             console.log(i+"it work!");
