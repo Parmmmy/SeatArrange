@@ -1,7 +1,7 @@
 window.line=[]
 var C
 
-window.myCustomer = new Array();
+window.myCustomer =[];
 var number
 
 function readqueue(line){
@@ -48,12 +48,8 @@ function queue(){
 }
 
 function numqueue(x){
-    if(document.getElementById("reservation").checked){
-        addreservedcustomer();
-    }
-    else{
+    if(!document.getElementById("reservation").checked){
         line.push(x);
         addcustomer();
     }
-
 }
