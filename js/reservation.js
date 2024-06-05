@@ -50,6 +50,9 @@ function addreservedcustomer(){
 function removereservation(x){
     myRCustomer[x].remove();
     myRCustomer.splice(x,1);
+    reservedline.splice(x,1);
+    reservedname.splice(x,1);
+    reservedtime.splice(x,1);
     resetreservationid(myRCustomer);
 }
 
