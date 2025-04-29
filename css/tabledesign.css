@@ -1,0 +1,81 @@
+.stable{
+    position: absolute;
+    height: 4.5vw;
+    width: 7.5vw;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 1px;
+}
+
+.mtable{
+    position: absolute;
+    height: 9vw;
+    width: 7.5vw;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 1px;
+}
+
+.ltable{
+    position: absolute;
+    height: 13.5vw;
+    width: 7.5vw;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 1px;
+}
+
+.lltable{
+    position: absolute;
+    height: 15vw;
+    width: 4.5vw;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 1px;
+}
+
+.counter{
+    position: absolute;
+    height: 3vw;
+    width: 3vw;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 1px;
+}
+
+.counterconnect1{
+    position: absolute;
+    height: 1.1vw;
+    width: 1vw;
+    background-color: black;
+    border: solid gray;
+    border-width: 0px 1px 0px 1px;
+}
+
+.counterconnect2{
+    position: absolute;
+    height: 2.6vw;
+    width: 1vw;
+    background-color: black;
+    border: solid gray;
+    border-width: 0px 1px 0px 1px;
+    transform: rotate(-45deg);
+
+}
+
+.counterconnect3{
+    position: absolute;
+    height: 1vw;
+    width: 1.1vw;
+    background-color: black;
+    border: solid gray;
+    border-width: 1px 0px 1px 0px;
+}
+
+#mocktime{
+    text-align: center;
+    font-size: 5vh;
+    height: 10%;
+    width: 30%;
+    border: solid 2px rgb(255, 232, 193);
+}

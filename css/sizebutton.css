@@ -1,0 +1,75 @@
+.partysize{
+    position: absolute;
+    right: 1%;
+    background-color: beige;
+    aspect-ratio: 1/1;
+    height: 7.8%;
+    box-sizing: border-box;
+    padding-top: 1.5vh;
+    border: solid 1px rgb(120, 79, 14);
+    border-radius: 3px;
+    text-align: center;
+    font-size: 4vh;
+    overflow: hidden;
+}
+
+.partysize:hover{
+    background-color: rgb(206, 206, 187);
+}
+
+.showqueue{
+    position: absolute;
+    height: 180px;
+    width: 60%;
+    left: 19%;
+    bottom: 22vh;
+    transform: translateY(230px);
+    background-color: beige;
+    border: solid 2px rgb(120, 79, 14);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.queuebox{
+    position:absolute;
+    height: 65px;
+    width: 70px;
+    top: 22px;
+    left: 5px;
+    background-color: lightblue;
+    border: solid 1px black;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.clicksize{
+    position: absolute;
+    height: 15px;
+    left:-1px;
+    width: 70.5px;
+    border: solid 1px black;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 9px;
+}
+
+.clicksize:hover{
+    opacity: 0.5;
+}
+
+.settable{
+    top: -16.5px;
+    background-color: lightgreen;
+    font-size: 13px;
+}
+
+.customerdetail{
+    bottom: -11.5px;
+    background-color: rgb(104, 131, 218);
+}
+
+.removecustomer{
+    bottom: -16.5px;
+    background-color: rgb(220, 79, 79);
+}

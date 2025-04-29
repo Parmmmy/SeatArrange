@@ -1,0 +1,107 @@
+@keyframes moveschedule {
+    from {transform: translateX(620px);}
+    to {transform: translateX(5px);}
+}
+
+@keyframes showschedule {
+    from {transform: translateX(5px);}
+    to {transform: translateX(620px);}
+}
+
+@keyframes maskon {
+    from {opacity: 0; visibility: hidden;}
+    to {opacity: 0.5; visibility: visible;}
+}
+
+@keyframes maskoff {
+    from {opacity: 0.5; visibility: visible;}
+    to {opacity: 0; visibility: hidden;}
+}
+
+.mask1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.on{
+    animation: maskon 0.8s ease 0s 1 normal both;
+}
+
+.off{
+    animation: maskoff 0.8s ease 0s 1 normal both;
+}
+
+.schedule{
+    position: absolute;
+    top: 22%;
+    left: -660px;
+    transform: translateX(5px);
+    /*transform: translateX(620px);*/
+    width: 630px;
+    height: 50%;
+    border: 3px solid #633721;
+    background-color: #A95D37;
+    border-radius: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+}
+
+.scheduleholder{
+    position: absolute;
+    top: 32%;
+    left: 5px;
+    transform: translateX(5px);
+    /*transform: translateX(620px);*/
+    width: 45px;
+    height: 36%;
+    border: 3px solid #633721;
+    background-color: #8A4C2C;
+    border-radius: 5px;
+    text-align: middle;
+    align-content: center;
+}
+
+.movein{
+    /*animation-name: moveschedule;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;*/
+    animation: moveschedule 0.8s ease 0s 1 normal both;
+}
+
+.moveout{
+    animation: showschedule 0.8s ease 0s 1 normal both;
+}
+
+.arrow{
+    border: solid black;
+    border-width: 0 8px 8px 0;
+    display: inline-block;
+    padding: 9px;
+}
+
+.arrow:hover{
+    border: solid black;
+    border-width: 0 8px 8px 0;
+    box-shadow: 2px 2px 1px 1px white;
+    display: inline-block;
+    padding: 9px;
+}
+
+.out{
+    transform: rotate(-45deg);
+}
+
+.in{
+    transform: rotate(135deg);
+}

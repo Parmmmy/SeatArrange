@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        TableSort
+    </title>
+</head>
+
+<bodY style="overflow:hidden;background-color: rgb(230, 199, 156);">
+
+
+    <!--mock time-->
+    <center><div id="mocktime">11:00</div></center>
+
+    <div id="setcenter" style="position:absolute;width:100%;height:100%;top:23%;left:-0.4%"> 
+    <!--draw background-->
+    <svg viewBox="-150 0 1330 400" style="position:absolute;top:0;left:0">
+        <polygon points="10,10 570,10 570,90 870,90 870,10 1020,10 1020,370 410,370 410,150 380,150 380,310 260,310 260,150 10,150" style="fill:rgb(255, 232, 193);stroke:rgb(120, 79, 14);stroke-width:2px;"></polygon>
+        <polygon points="570,10 580,10 580,90 570,90" style="fill:rgba(255, 232, 193, 0.85);stroke:rgb(120, 79, 14);stroke-width:2px;"></polygon>
+        <polygon points="580,10 590,10 590,90 580,90" style="fill:rgb(255, 232, 193, 0.7);stroke:rgb(120, 79, 14);stroke-width:2px;"></polygon>
+        <polygon points="590,10 600,10 600,90 590,90" style="fill:rgb(255, 232, 193, 0.55);stroke:rgb(120, 79, 14);stroke-width:2px;"></polygon>
+        <polygon points="600,10 610,10 610,90 600,90" style="fill:rgb(255, 232, 193, 0.4);stroke:rgb(120, 79, 14);stroke-width:2px;"></polygon>
+        <polygon points="610,10 620,10 620,90 610,90" style="fill:rgb(255, 232, 193, 0.25);stroke:rgb(120, 79, 14);stroke-width:2px;"></polygon>
+    </svg>
+    <!--show table-->
+    <div class="stable" id="table3" style="left:78.5vw;top:14.2vw;visibility:hidden;"></div>
+    <div class="stable" id="table4" style="left:78.5vw;top:22.2vw;visibility:hidden;"></div>
+    <div class="stable" id="table5" style="left:66.9vw;top:7.6vw;visibility:visible;"></div>
+    <div class="stable" id="table6" style="left:66.9vw;top:22.2vw;visibility:visible;"></div>
+    <div class="stable" id="table7" style="left:55.3vw;top:7.6vw;visibility:visible;"></div>
+    <div class="stable" id="table8" style="left:55.3vw;top:22.2vw;visibility:visible;"></div>
+    <div class="stable" id="table10" style="left:43.7vw;top:12vw;visibility:hidden;"></div>
+    <div class="stable" id="table20" style="left:43.7vw;top:22.2vw;visibility:hidden;"></div>
+    <div class="mtable" id="table12" style="left:78.5vw;top:1.6vw;visibility:visible;"></div>
+    <div class="mtable" id="table34" style="left:78.5vw;top:17.8vw;visibility:visible;"></div>
+    <div class="mtable" id="table56" style="left:66.9vw;top:17.8vw;visibility:hidden;"></div>
+    <div class="mtable" id="table78" style="left:55.3vw;top:17.8vw;visibility:hidden;"></div>
+    <div class="mtable" id="table1020" style="left:43.7vw;top:15vw;visibility:visible;"></div>
+    <div class="ltable" id="table123" style="left:78.5vw;top:1.6vw;visibility:hidden;"></div>
+    <div class="lltable" id="table10201" style="left:45.2vw;top:11.7vw;visibility:hidden;"></div>
+    <div class="counter" id="counter1" style="left:31.4vw;top:19.6vw;visibility:visible;"></div>
+    <div class="counter" id="counter2" style="left:31.4vw;top:15.6vw;visibility:visible;" ></div>
+    <div class="counter" id="counter3" style="left:31.4vw;top:11.6vw;visibility:visible;"></div>
+    <div class="counter" id="counter4" style="left:27.3vw;top:7.5vw;visibility:visible;"></div>
+    <div class="counter" id="counter5" style="left:23.3vw;top:7.5vw;visibility:visible;"></div>
+    <div class="counter" id="counter6" style="left:19.3vw;top:7.5vw;visibility:visible;"></div>
+    <div class="counter" id="counter7" style="left:15.3vw;top:7.5vw;visibility:visible;"></div>
+    <div class="counterconnect1" id="connect1" style="left:32.4vw;top:18.6vw;visibility:hidden;"></div>
+    <div class="counterconnect1" id="connect2" style="left:32.4vw;top:14.6vw;visibility:hidden;"></div>
+    <div class="counterconnect2" id="connect3" style="left:30.38vw;top:9.85vw;visibility:hidden;"></div>
+    <div class="counterconnect3" id="connect4" style="left:26.3vw;top:8.5vw;visibility:hidden;"></div>
+    <div class="counterconnect3" id="connect5" style="left:22.3vw;top:8.5vw;visibility:hidden;"></div>
+    <div class="counterconnect3" id="connect6" style="left:18.3vw;top:8.5vw;visibility:hidden;"></div>
+    </div>
+
+    <!--lining-->
+    <div class="showqueue" id="storeline"></div>
+
+    <!--mask when show reservation list-->
+    <div class="mask1" id="idmask1"></div>
+
+    <!--party size button-->
+    <div class="partysize" id="size1" style="top:2%;" onclick="createqueue(1)">1</div>
+    <div class="partysize" id="size2" style="top:11.8%;" onclick="createqueue(2)">2</div>
+    <div class="partysize" id="size3" style="top:21.6%;" onclick="createqueue(3)">3</div>
+    <div class="partysize" id="size4" style="top:31.4%;" onclick="createqueue(4)">4</div>
+    <div class="partysize" id="size5" style="top:41.2%;" onclick="createqueue(5)">5</div>
+    <div class="partysize" id="size6" style="top:51%;" onclick="createqueue(6)">6</div>
+    <div class="partysize" id="size7" style="top:60.8%;" onclick="createqueue(7)">7</div>
+    <div class="partysize" id="size8" style="top:70.6%;" onclick="createqueue(8)">8</div>
+    <div class="partysize" id="size9" style="top:80.4%;" onclick="createqueue(9)">9</div>
+    <div class="partysize" id="customsize" style="top:90.2%;" onclick="createqueue(10)">10</div>
+
+    <!--make reservation list-->
+    <div class="schedule" id="idschedule">
+        <span style="font-size:20px;">&nbsp;</span>
+        <select class="reservetime" id="idhour"></select>
+        <span style="font-size:20px;"><b>:</b></span>
+        <select class="reservetime" id="idminute"> </select>
+        <textarea class="scheduleheading" id="reservepeople" rows="1" style="width:35px;text-align:center;" placeholder="No:"></textarea>
+        <textarea class="scheduleheading" id="reservename" rows="1" style="width:190px" placeholder="Name:"></textarea>
+        <textarea class="scheduleheading" id="reservetel" rows="1" style="width:100px" placeholder="TEL:"></textarea>
+        <span style="font-size:20px;">|</span>
+        <button onclick="addreservation()" class="schedulebutton" style="background-color:lightgreen;border-color:dargreen;"><span>&#10003;</span></button>
+        <button onclick="clearinput()" class="schedulebutton" style="background-color:rgb(220, 79, 79);margin: 0 0 0 2px;"><span>&#10005;</span></button>
+
+        <div class="showtable" id="reservelist">
+
+            <span class="timescale">|&emsp;11:00&emsp;|&emsp;11:30&emsp;|&emsp;12:00&emsp;|&emsp;12:30&emsp;|&emsp;13:00&emsp;|&emsp;13:30&emsp;|&emsp;14:00&emsp;|&emsp;14:30&emsp;|&emsp;15:00&emsp;&emsp;15:30</span>
+
+            <svg height="600px" width="730px" style="position:absolute;">
+                <line x1="103" y1="0" x2="103" y2="600" style="stroke:gray;stroke-width:2px"></line>
+                <line x1="165" y1="0" x2="165" y2="600" style="stroke:gray;stroke-width:2px"></line>
+                <line x1="228" y1="0" x2="228" y2="600" style="stroke:gray;stroke-width:2px"></line>
+                <line x1="290" y1="0" x2="290" y2="600" style="stroke:gray;stroke-width:2px"></line>
+                <line x1="353" y1="0" x2="353" y2="600" style="stroke:gray;stroke-width:2px"></line>
+                <line x1="415" y1="0" x2="415" y2="600" style="stroke:gray;stroke-width:2px"></line>
+                <line x1="478" y1="0" x2="478" y2="600" style="stroke:gray;stroke-width:2px"></line>
+                <line x1="540" y1="0" x2="540" y2="600" style="stroke:gray;stroke-width:2px"></line>
+                <line x1="603" y1="0" x2="603" y2="600" style="stroke:gray;stroke-width:2px"></line>
+                <line x1="665" y1="0" x2="665" y2="600" style="stroke:gray;stroke-width:2px"></line>
+                <line x1="728" y1="0" x2="728" y2="600" style="stroke:gray;stroke-width:2px"></line>
+            </svg>
+
+            <select class="selectmode" id="mode">
+                <option>by order</option>
+                <option>by time</option>
+                <!-- <option>by table</option> -->
+            </select>
+
+        </div>
+    </div>
+
+    <div class="scheduleholder" id="idscheduleholder">
+        <p>&nbsp;<i class="arrow out" onclick="moveout()"></i></p>
+        <br>
+        <p>&emsp;<i class="arrow in" onclick="movein()"></i></p>
+    </div>
+
+
+
+
+
+
+
+    <div class="mask2" id="idmask2"></div>
+
+<link rel="stylesheet" href="css/schedule.css">
+<link rel="stylesheet" href="css/scheduleinfo.css">
+<link rel="stylesheet" href="css/sizebutton.css">
+<link rel="stylesheet" href="css/tabledesign.css">
+<script src="js/move_schedule.js"></script>
+<script src="js/schedule_info.js"></script>
+<script src="js/nonreserveline.js"></script>
+<script src="js/settable.js"></script>
+    
+</bodY>
+
+</html>
