@@ -487,10 +487,17 @@ function totable(x,n){
 }
 
 function checkline(){
-    if(noreservation.length!=0){
+    if(noreservation.length!=0 || reservation.length!=0){
         tablemax = actualtablemax.slice();
         tabledisplay = actualtabledisplay.slice();
         counter = actualcounter.slice();
+
+        for(let i=0;i<reservation.length;i++){
+            if(currenthour*60+currentminute-reservation[i].reservehour*60-reservation[i].reserveminute>-60){
+                document.getElementById("toreserveseat"+i).innerHTML = checktable(reservation[i].no);
+            }
+        }
+
         for(let i=0;i<noreservation.length;i++){
             document.getElementById("nonreservetable"+i).innerHTML = checktable(noreservation[i]);
             if (document.getElementById("nonreservetable"+i).innerHTML!=""){
