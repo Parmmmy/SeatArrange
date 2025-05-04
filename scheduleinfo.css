@@ -1,0 +1,89 @@
+.reservetime{
+    width: 45px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.scheduleheading{
+    font-size: 16px;
+    top: 10px;
+    height: 18px;
+    padding: 5px;
+    margin: 0 0 -8px 2px;
+    resize: none;
+    overflow: hidden;
+}
+
+.schedulebutton{
+    font-size: 16px;
+    transform: translateY(0px);
+    height: 30px;
+    width: 30px;
+}
+
+.selectmode{
+    font-size: 14px;
+    width:99px;
+    position: sticky;
+    top: 2px;
+    left: 1px;
+    text-align: center;
+}
+
+.timescale{
+    /*background-color: white;*/
+    font-size: 14px;
+    position: absolute;
+    width:620px;
+    height: 20px;
+    top: 4px;
+    left: 101px;
+    color: gray;
+}
+
+.showtable{
+    border: solid #633721;
+    border-width:3px 0 3px 0;
+    background-color: white;
+    position: fixed;
+    width:560px;
+    height: 79%;
+    top: 14.5%;
+    left: 69px;
+    overflow: scroll;
+}
+
+.reserveframe{
+    position: absolute;
+    width: 273px;
+    height: 25px;
+    top: 35px;
+    background-color: lightblue;
+    border: solid 1px black;
+    border-radius: 3px;
+    padding-top: 5px;
+    padding-left: 8px;
+}
+
+.removereserve{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    right: 5px;
+    background-color: lightcoral;
+    border-radius: 3px;
+}
+
+.plantable{
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    top: 35px;
+    left: 34px;
+    padding-top: 5px;
+    background-color: lightgreen;
+    border: solid 1px black;
+    border-radius: 3px;
+    text-align: center;
+}
