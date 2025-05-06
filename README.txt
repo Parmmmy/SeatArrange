@@ -4,4 +4,4 @@ Add waiting customer by clicking the button panel (the program work for up to 6 
 Automatically suggest seat for each customer. Put customer in table by clicking green tab and remove customer from line by clicking red tab.
 Remove customer from each table by clicking the table.
 
-Reserve seat section is not yet complete but seat will be save for customer with reservation when reserve time is near.
+Reserve seat section is not yet complete, but seat will be save for customer with reservation when reserve time come close.
