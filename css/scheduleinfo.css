@@ -75,6 +75,10 @@
     border-radius: 3px;
 }
 
+.removereserve:hover{
+    opacity: 50%;
+}
+
 .plantable{
     position: absolute;
     width: 30px;
@@ -86,4 +90,8 @@
     border: solid 1px black;
     border-radius: 3px;
     text-align: center;
+}
+
+.plantable:hover{
+    opacity: 50%;
 }
