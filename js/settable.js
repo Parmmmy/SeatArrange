@@ -409,16 +409,16 @@ function checktable(x){
             tabledisplay[5]=2;
             return "T"+5;
         }
-        let k=checkcounter(x);
-        if(k!=""){
-            return k;
-        }
         if(tablemax[6]==2 && tablemax[7]==2){
             tablemax[6]=0;
             tablemax[7]=0;
             tabledisplay[6]=0;
             tabledisplay[7]=2;
             return "T"+7;
+        }
+        let k=checkcounter(x);
+        if(k!=""){
+            return k;
         }
     }
     else if(x==5){
@@ -495,6 +495,9 @@ function checkline(){
         for(let i=0;i<reservation.length;i++){
             if(currenthour*60+currentminute-reservation[i].reservehour*60-reservation[i].reserveminute>-60){
                 document.getElementById("toreserveseat"+i).innerHTML = checktable(reservation[i].no);
+                if (document.getElementById("toreserveseat"+i).innerHTML!=""){
+                    document.getElementById("toreserveseat"+i).onclick=function(){totable(document.getElementById("toreserveseat"+i).innerHTML,reservation[i].no);removereservebutton(i);};
+                }
             }
         }
 
